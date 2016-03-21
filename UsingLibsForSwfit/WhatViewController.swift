@@ -8,8 +8,10 @@
 
 import UIKit
 
-class WhatViewController: UIViewController {
+class WhatViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
 
+//    var collectionView = UICollectionView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.lightGrayColor()
@@ -17,8 +19,37 @@ class WhatViewController: UIViewController {
         self.title = "第三夜"
         
         // Do any additional setup after loading the view.
+        createCollectionView()
     }
-
+    // 创建collectionView
+    func createCollectionView()
+    {
+//        let flowLayout = UICollectionViewFlowLayout.init()
+//        collectionView = UICollectionView.init(frame: self.view.bounds, collectionViewLayout: flowLayout)
+//        collectionView.delegate = self
+//        collectionView.dataSource = self
+        
+        let collectionView =  UICollectionView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height), collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.backgroundColor = UIColor.yellowColor()
+        collectionView.dataSource  = self
+        collectionView.delegate = self
+        collectionView .registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
+        self.view.addSubview(collectionView)
+    }
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cellId", forIndexPath: indexPath)
+        cell.backgroundColor = UIColor.cyanColor()
+        return cell
+    }
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 30
+    }
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(100, 100)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
