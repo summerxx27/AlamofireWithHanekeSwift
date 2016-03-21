@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var arrayData = NSMutableArray()
     var tableViewself = UITableView()
     var viewHeader = UIView()
+    // 刷新
+    let refreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,6 +23,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         createTableview()
         XSummerybcNetworkReq()
         createHeaderView()
+        
+        refreshControl.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "松手刷新")
+        tableViewself.addSubview(refreshControl)
+    }
+    // 添加刷新
+    func refresh()
+    {
+        XSummerybcNetworkReq()
     }
     // createT
     func createTableview(){
@@ -98,6 +109,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if self.arrayData.count > 0{
                 self.tableViewself.reloadData()
             }
+            self.refreshControl.endRefreshing()
+
         }
         
     }
