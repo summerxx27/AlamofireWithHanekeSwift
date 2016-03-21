@@ -43,7 +43,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // [_modelOne.pic substringToIndex:66]
         let str = dic["pic"] as? NSString
         // 如果崩溃是我找的接口的问题
-        cell.imagePic.hnk_setImageFromURL(NSURL.init(string:(str?.substringToIndex(66))!)!)
+        if (str != nil && str?.hasSuffix("gif") != nil){
+            cell.imagePic.hnk_setImageFromURL(NSURL.init(string:(str?.substringToIndex(66))!)!)
+        }
     
         return cell
     }
