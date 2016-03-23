@@ -39,6 +39,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.view.addSubview(tableViewself)
         tableViewself.delegate = self
         tableViewself.dataSource = self
+//        tableViewself.estimatedRowHeight = 44
+//        tableViewself.rowHeight = UITableViewAutomaticDimension
         // 注册
         tableViewself.registerClass(TableViewCell.self, forCellReuseIdentifier: "cellId")
     }
@@ -69,6 +71,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var dic = NSMutableDictionary()
         dic = self.arrayData[indexPath.section] as! NSMutableDictionary
         cell.titleLabel.text = dic["title"] as? String
+        cell.titleLabel.numberOfLines = 0
+        // 传值进cell, 计算高度
+        cell.string = (dic["title"] as? String)!
         // [_modelOne.pic substringToIndex:66]
         let str = dic["pic"] as? NSString
         // 如果崩溃是我找的接口的问题

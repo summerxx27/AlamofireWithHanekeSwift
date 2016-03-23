@@ -24,13 +24,8 @@ class WhatViewController: UIViewController, UICollectionViewDataSource, UICollec
     // 创建collectionView
     func createCollectionView()
     {
-//        let flowLayout = UICollectionViewFlowLayout.init()
-//        collectionView = UICollectionView.init(frame: self.view.bounds, collectionViewLayout: flowLayout)
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
-        
         let collectionView =  UICollectionView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height), collectionViewLayout: UICollectionViewFlowLayout())
-        collectionView.backgroundColor = UIColor.yellowColor()
+        collectionView.backgroundColor = UIColor.lightGrayColor()
         collectionView.dataSource  = self
         collectionView.delegate = self
         collectionView .registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
@@ -49,6 +44,12 @@ class WhatViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return CGSizeMake(100, 100)
+    }
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let night = NightofFourViewController()
+        self.presentViewController(night, animated: true) { () -> Void in
+            
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

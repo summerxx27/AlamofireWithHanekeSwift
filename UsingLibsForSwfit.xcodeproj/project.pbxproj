@@ -21,6 +21,8 @@
 		BC6DB5401C9FE4B0002B4B65 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6DB5391C9FE4A8002B4B65 /* Haneke.framework */; };
 		BC6DB5411C9FE4B0002B4B65 /* Haneke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC6DB5391C9FE4A8002B4B65 /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC6DB54F1C9FF520002B4B65 /* WhatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6DB54E1C9FF520002B4B65 /* WhatViewController.swift */; };
+		BC7B4B561CA0F57800ACBFC1 /* XSummerybcHeightForString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7B4B551CA0F57800ACBFC1 /* XSummerybcHeightForString.swift */; };
+		BC7B4B611CA110AD00ACBFC1 /* NightofFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7B4B601CA110AD00ACBFC1 /* NightofFourViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +167,8 @@
 		BC6DB52F1C9FE2EC002B4B65 /* SecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecViewController.swift; sourceTree = "<group>"; };
 		BC6DB5311C9FE4A7002B4B65 /* Haneke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Haneke.xcodeproj; path = "HanekeSwift-master/Haneke.xcodeproj"; sourceTree = "<group>"; };
 		BC6DB54E1C9FF520002B4B65 /* WhatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhatViewController.swift; sourceTree = "<group>"; };
+		BC7B4B551CA0F57800ACBFC1 /* XSummerybcHeightForString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XSummerybcHeightForString.swift; sourceTree = "<group>"; };
+		BC7B4B601CA110AD00ACBFC1 /* NightofFourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightofFourViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,7 +228,9 @@
 				BC6DB4E41C9FD047002B4B65 /* ViewController.swift */,
 				BC6DB52F1C9FE2EC002B4B65 /* SecViewController.swift */,
 				BC6DB54E1C9FF520002B4B65 /* WhatViewController.swift */,
+				BC7B4B601CA110AD00ACBFC1 /* NightofFourViewController.swift */,
 				BC6DB52D1C9FDBD4002B4B65 /* TableViewCell.swift */,
+				BC7B4B551CA0F57800ACBFC1 /* XSummerybcHeightForString.swift */,
 				BC6DB4E61C9FD047002B4B65 /* Main.storyboard */,
 				BC6DB4E91C9FD047002B4B65 /* Assets.xcassets */,
 				BC6DB4EB1C9FD047002B4B65 /* LaunchScreen.storyboard */,
@@ -508,7 +514,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC6DB5301C9FE2EC002B4B65 /* SecViewController.swift in Sources */,
+				BC7B4B611CA110AD00ACBFC1 /* NightofFourViewController.swift in Sources */,
 				BC6DB54F1C9FF520002B4B65 /* WhatViewController.swift in Sources */,
+				BC7B4B561CA0F57800ACBFC1 /* XSummerybcHeightForString.swift in Sources */,
 				BC6DB52E1C9FDBD4002B4B65 /* TableViewCell.swift in Sources */,
 				BC6DB4E51C9FD047002B4B65 /* ViewController.swift in Sources */,
 				BC6DB4E31C9FD047002B4B65 /* AppDelegate.swift in Sources */,

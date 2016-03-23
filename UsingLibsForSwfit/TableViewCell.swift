@@ -12,6 +12,7 @@ class TableViewCell: UITableViewCell {
     
     var titleLabel = UILabel()
     var imagePic = UIImageView()
+    var string = String()
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         
         super.init(style: UITableViewCellStyle.Default, reuseIdentifier: reuseIdentifier)
@@ -27,6 +28,7 @@ class TableViewCell: UITableViewCell {
     {
         imagePic = UIImageView.init(frame: CGRectMake(0, 0, 325, 180))
         self.contentView.addSubview(imagePic)
+        // 二次计算高度
         titleLabel = UILabel.init(frame: CGRectMake(0, 185, 325, 30))
         self.contentView.addSubview(titleLabel)
     }
