@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC5FDCB61CA2740300FD9449 /* Surge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5FDCB31CA273FB00FD9449 /* Surge.framework */; };
+		BC5FDCB71CA2740300FD9449 /* Surge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC5FDCB31CA273FB00FD9449 /* Surge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC5FDCD21CA275A100FD9449 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5FDCC51CA2759200FD9449 /* SwiftyJSON.framework */; };
+		BC5FDCD31CA275A100FD9449 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC5FDCC51CA2759200FD9449 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC6DB4E31C9FD047002B4B65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6DB4E21C9FD047002B4B65 /* AppDelegate.swift */; };
 		BC6DB4E51C9FD047002B4B65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6DB4E41C9FD047002B4B65 /* ViewController.swift */; };
 		BC6DB4E81C9FD047002B4B65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC6DB4E61C9FD047002B4B65 /* Main.storyboard */; };
@@ -26,6 +30,83 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BC5FDCB21CA273FB00FD9449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5FDCA41CA273FA00FD9449 /* Surge.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8A1E1AA19917A79009735E2;
+			remoteInfo = Surge;
+		};
+		BC5FDCB41CA273FB00FD9449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5FDCA41CA273FA00FD9449 /* Surge.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F84A6AAE19A9A72F007B53E1;
+			remoteInfo = SurgeTests;
+		};
+		BC5FDCB81CA2740300FD9449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5FDCA41CA273FA00FD9449 /* Surge.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8A1E1A919917A79009735E2;
+			remoteInfo = Surge;
+		};
+		BC5FDCC41CA2759200FD9449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5FDCBA1CA2759200FD9449 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFDB19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
+		BC5FDCC61CA2759200FD9449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5FDCBA1CA2759200FD9449 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFE619575BE100351305;
+			remoteInfo = "SwiftyJSON iOS Tests";
+		};
+		BC5FDCC81CA2759200FD9449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5FDCBA1CA2759200FD9449 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC5B1A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX";
+		};
+		BC5FDCCA1CA2759200FD9449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5FDCBA1CA2759200FD9449 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC651A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX Tests";
+		};
+		BC5FDCCC1CA2759200FD9449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5FDCBA1CA2759200FD9449 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4D7CCE81B9465A700EE7221;
+			remoteInfo = "SwiftyJSON watchOS";
+		};
+		BC5FDCCE1CA2759200FD9449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5FDCBA1CA2759200FD9449 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7236B4F61BAC14150020529B;
+			remoteInfo = "SwiftyJSON tvOS";
+		};
+		BC5FDCD01CA2759200FD9449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5FDCBA1CA2759200FD9449 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A8580F741BCF5C5B00DA927B;
+			remoteInfo = "SwiftyJSON tvOS Tests";
+		};
+		BC5FDCD41CA275A100FD9449 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC5FDCBA1CA2759200FD9449 /* SwiftyJSON.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
 		BC6DB4F41C9FD047002B4B65 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BC6DB4D71C9FD047002B4B65 /* Project object */;
@@ -140,6 +221,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BC5FDCD31CA275A100FD9449 /* SwiftyJSON.framework in Embed Frameworks */,
+				BC5FDCB71CA2740300FD9449 /* Surge.framework in Embed Frameworks */,
 				BC6DB5411C9FE4B0002B4B65 /* Haneke.framework in Embed Frameworks */,
 				BC6DB5291C9FD153002B4B65 /* Alamofire.framework in Embed Frameworks */,
 			);
@@ -149,6 +232,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC5FDCA41CA273FA00FD9449 /* Surge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Surge.xcodeproj; path = "Surge-master/Surge.xcodeproj"; sourceTree = "<group>"; };
+		BC5FDCBA1CA2759200FD9449 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
 		BC6DB4DF1C9FD047002B4B65 /* UsingLibsForSwfit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsingLibsForSwfit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6DB4E21C9FD047002B4B65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC6DB4E41C9FD047002B4B65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +261,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC5FDCD21CA275A100FD9449 /* SwiftyJSON.framework in Frameworks */,
+				BC5FDCB61CA2740300FD9449 /* Surge.framework in Frameworks */,
 				BC6DB5401C9FE4B0002B4B65 /* Haneke.framework in Frameworks */,
 				BC6DB5281C9FD153002B4B65 /* Alamofire.framework in Frameworks */,
 			);
@@ -198,9 +285,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC5FDCA51CA273FA00FD9449 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC5FDCB31CA273FB00FD9449 /* Surge.framework */,
+				BC5FDCB51CA273FB00FD9449 /* SurgeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC5FDCBB1CA2759200FD9449 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC5FDCC51CA2759200FD9449 /* SwiftyJSON.framework */,
+				BC5FDCC71CA2759200FD9449 /* SwiftyJSON iOS Tests.xctest */,
+				BC5FDCC91CA2759200FD9449 /* SwiftyJSON.framework */,
+				BC5FDCCB1CA2759200FD9449 /* SwiftyJSON OSX Tests.xctest */,
+				BC5FDCCD1CA2759200FD9449 /* SwiftyJSON.framework */,
+				BC5FDCCF1CA2759200FD9449 /* SwiftyJSON.framework */,
+				BC5FDCD11CA2759200FD9449 /* SwiftyJSON tvOS Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BC6DB4D61C9FD047002B4B65 = {
 			isa = PBXGroup;
 			children = (
+				BC5FDCBA1CA2759200FD9449 /* SwiftyJSON.xcodeproj */,
+				BC5FDCA41CA273FA00FD9449 /* Surge.xcodeproj */,
 				BC6DB5311C9FE4A7002B4B65 /* Haneke.xcodeproj */,
 				BC6DB5101C9FD135002B4B65 /* Alamofire.xcodeproj */,
 				BC6DB4E11C9FD047002B4B65 /* UsingLibsForSwfit */,
@@ -306,6 +418,8 @@
 			dependencies = (
 				BC6DB52B1C9FD153002B4B65 /* PBXTargetDependency */,
 				BC6DB5431C9FE4B0002B4B65 /* PBXTargetDependency */,
+				BC5FDCB91CA2740300FD9449 /* PBXTargetDependency */,
+				BC5FDCD51CA275A100FD9449 /* PBXTargetDependency */,
 			);
 			name = UsingLibsForSwfit;
 			productName = UsingLibsForSwfit;
@@ -391,6 +505,14 @@
 					ProductGroup = BC6DB5321C9FE4A7002B4B65 /* Products */;
 					ProjectRef = BC6DB5311C9FE4A7002B4B65 /* Haneke.xcodeproj */;
 				},
+				{
+					ProductGroup = BC5FDCA51CA273FA00FD9449 /* Products */;
+					ProjectRef = BC5FDCA41CA273FA00FD9449 /* Surge.xcodeproj */;
+				},
+				{
+					ProductGroup = BC5FDCBB1CA2759200FD9449 /* Products */;
+					ProjectRef = BC5FDCBA1CA2759200FD9449 /* SwiftyJSON.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -402,6 +524,69 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		BC5FDCB31CA273FB00FD9449 /* Surge.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Surge.framework;
+			remoteRef = BC5FDCB21CA273FB00FD9449 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC5FDCB51CA273FB00FD9449 /* SurgeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SurgeTests.xctest;
+			remoteRef = BC5FDCB41CA273FB00FD9449 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC5FDCC51CA2759200FD9449 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = BC5FDCC41CA2759200FD9449 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC5FDCC71CA2759200FD9449 /* SwiftyJSON iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON iOS Tests.xctest";
+			remoteRef = BC5FDCC61CA2759200FD9449 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC5FDCC91CA2759200FD9449 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = BC5FDCC81CA2759200FD9449 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC5FDCCB1CA2759200FD9449 /* SwiftyJSON OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON OSX Tests.xctest";
+			remoteRef = BC5FDCCA1CA2759200FD9449 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC5FDCCD1CA2759200FD9449 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = BC5FDCCC1CA2759200FD9449 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC5FDCCF1CA2759200FD9449 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = BC5FDCCE1CA2759200FD9449 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC5FDCD11CA2759200FD9449 /* SwiftyJSON tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON tvOS Tests.xctest";
+			remoteRef = BC5FDCD01CA2759200FD9449 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		BC6DB51B1C9FD136002B4B65 /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -542,6 +727,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BC5FDCB91CA2740300FD9449 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Surge;
+			targetProxy = BC5FDCB81CA2740300FD9449 /* PBXContainerItemProxy */;
+		};
+		BC5FDCD51CA275A100FD9449 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftyJSON iOS";
+			targetProxy = BC5FDCD41CA275A100FD9449 /* PBXContainerItemProxy */;
+		};
 		BC6DB4F51C9FD047002B4B65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BC6DB4DE1C9FD047002B4B65 /* UsingLibsForSwfit */;

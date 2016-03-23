@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import Haneke
+import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var arrayData = NSMutableArray()
@@ -19,11 +20,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        // 创建tableview
         createTableview()
+        // 网络请求
         XSummerybcNetworkReq()
+        // 创建tableviewheader
         createHeaderView()
-        
+        // 刷新控件
         refreshControl.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: "松手刷新")
         tableViewself.addSubview(refreshControl)
@@ -39,22 +42,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.view.addSubview(tableViewself)
         tableViewself.delegate = self
         tableViewself.dataSource = self
-//        tableViewself.estimatedRowHeight = 44
-//        tableViewself.rowHeight = UITableViewAutomaticDimension
         // 注册
         tableViewself.registerClass(TableViewCell.self, forCellReuseIdentifier: "cellId")
+        print(sayHello("Xsummerbyc")) // hello, Xsummerbyc!
+        
+        
     }
     // createHeader
+    func sayHello(name: String) ->String
+    {
+        let results = "hello, " + name + "!"
+        return results
+    }
     func createHeaderView()
     {
         viewHeader = UIView.init(frame: CGRectMake(20, 20, 325, 100))
         viewHeader.backgroundColor = UIColor.yellowColor()
-        
         let label = UILabel.init(frame: CGRectMake(0, 0, 325, 40))
         viewHeader.addSubview(label)
         label.text = "I am HeaderView"
-        
-        
         tableViewself.tableHeaderView = viewHeader
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -97,28 +103,44 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let url = "http://api.app.happyjuzi.com/v2.4/article/list/home?&page=1"
         
         
-        Alamofire.request(.GET, url).responseJSON() {
-            (data) in
-
-            var dic = NSDictionary()
-            dic = (data.result.value as? NSDictionary)!;
-            let dataDic = dic.valueForKey("data")as! NSDictionary
-            // 最内层的字典数组
-            let listArray = dataDic.valueForKey("list") as! NSMutableArray
-            for dict in listArray{
-                print(dict.valueForKey("title"))
-            }
-            // 重新复制 .语法
-            self.arrayData = listArray
-            
-            if self.arrayData.count > 0{
-                self.tableViewself.reloadData()
-            }
-            self.refreshControl.endRefreshing()
-
-        }
+//        Alamofire.request(.GET, url).responseJSON() {
+//            (data) in
+//
+//            var dic = NSDictionary()
+//            dic = (data.result.value as? NSDictionary)!;
+//            let dataDic = dic.valueForKey("data")as! NSDictionary
+//            // 最内层的字典数组
+//            let listArray = dataDic.valueForKey("list") as! NSMutableArray
+//            for dict in listArray{
+//                // 字典转模型(Swift也是这种说法吧)
+//                
+//            }
+//            // 重新复制 .语法
+//            self.arrayData = listArray
+//            if self.arrayData.count > 0{
+//                self.tableViewself.reloadData()
+//            }
+//            self.refreshControl.endRefreshing()
+//
+//        }
         
+        // 使用SwiftyJSON
+        Alamofire.request(.GET, url).validate().responseJSON { response in
+            switch response.result {
+            case .Success:
+                if let value = response.result.value {
+                    let json = JSON(value)
+                    print("JSON: \(json)")
+                    let dataDic = json["data"]
+                    let array = dataDic["list"]
+                    
+                }
+            case .Failure(let error):
+                print(error)
+            }
+        }
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

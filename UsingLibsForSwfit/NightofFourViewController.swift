@@ -20,6 +20,9 @@ class NightofFourViewController: UIViewController {
         self.view.addSubview(button)
         button.setTitle("back", forState: UIControlState.Normal)
         button.addTarget(self, action: "click", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        
+        
     }
     func click()
     {
@@ -27,7 +30,6 @@ class NightofFourViewController: UIViewController {
             
         }
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
