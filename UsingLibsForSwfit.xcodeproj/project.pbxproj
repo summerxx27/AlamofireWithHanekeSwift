@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC1DE8141CA387900030276E /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DE8131CA387900030276E /* Info.swift */; };
 		BC5FDCB61CA2740300FD9449 /* Surge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5FDCB31CA273FB00FD9449 /* Surge.framework */; };
 		BC5FDCB71CA2740300FD9449 /* Surge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC5FDCB31CA273FB00FD9449 /* Surge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC5FDCD21CA275A100FD9449 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5FDCC51CA2759200FD9449 /* SwiftyJSON.framework */; };
@@ -232,6 +233,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC1DE8131CA387900030276E /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		BC5FDCA41CA273FA00FD9449 /* Surge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Surge.xcodeproj; path = "Surge-master/Surge.xcodeproj"; sourceTree = "<group>"; };
 		BC5FDCBA1CA2759200FD9449 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
 		BC6DB4DF1C9FD047002B4B65 /* UsingLibsForSwfit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsingLibsForSwfit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -347,6 +349,7 @@
 				BC6DB4E91C9FD047002B4B65 /* Assets.xcassets */,
 				BC6DB4EB1C9FD047002B4B65 /* LaunchScreen.storyboard */,
 				BC6DB4EE1C9FD047002B4B65 /* Info.plist */,
+				BC1DE8131CA387900030276E /* Info.swift */,
 			);
 			path = UsingLibsForSwfit;
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC6DB5301C9FE2EC002B4B65 /* SecViewController.swift in Sources */,
+				BC1DE8141CA387900030276E /* Info.swift in Sources */,
 				BC7B4B611CA110AD00ACBFC1 /* NightofFourViewController.swift in Sources */,
 				BC6DB54F1C9FF520002B4B65 /* WhatViewController.swift in Sources */,
 				BC7B4B561CA0F57800ACBFC1 /* XSummerybcHeightForString.swift in Sources */,

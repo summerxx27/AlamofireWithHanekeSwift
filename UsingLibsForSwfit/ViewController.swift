@@ -103,42 +103,41 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let url = "http://api.app.happyjuzi.com/v2.4/article/list/home?&page=1"
         
         
-//        Alamofire.request(.GET, url).responseJSON() {
-//            (data) in
-//
-//            var dic = NSDictionary()
-//            dic = (data.result.value as? NSDictionary)!;
-//            let dataDic = dic.valueForKey("data")as! NSDictionary
-//            // 最内层的字典数组
-//            let listArray = dataDic.valueForKey("list") as! NSMutableArray
-//            for dict in listArray{
-//                // 字典转模型(Swift也是这种说法吧)
-//                
-//            }
-//            // 重新复制 .语法
-//            self.arrayData = listArray
-//            if self.arrayData.count > 0{
-//                self.tableViewself.reloadData()
-//            }
-//            self.refreshControl.endRefreshing()
-//
-//        }
-        
-        // 使用SwiftyJSON
-        Alamofire.request(.GET, url).validate().responseJSON { response in
-            switch response.result {
-            case .Success:
-                if let value = response.result.value {
-                    let json = JSON(value)
-                    print("JSON: \(json)")
-                    let dataDic = json["data"]
-                    let array = dataDic["list"]
-                    
-                }
-            case .Failure(let error):
-                print(error)
+        Alamofire.request(.GET, url).responseJSON() {
+            (data) in
+
+            var dic = NSDictionary()
+            dic = (data.result.value as? NSDictionary)!;
+            let dataDic = dic.valueForKey("data")as! NSDictionary
+            // 最内层的字典数组
+            let listArray = dataDic.valueForKey("list") as! NSMutableArray
+            for dict in listArray{
+                // 字典转模型(Swift也是这种说法吧)
+                
             }
+            // 重新复制 .语法
+            self.arrayData = listArray
+            if self.arrayData.count > 0{
+                self.tableViewself.reloadData()
+            }
+            self.refreshControl.endRefreshing()
+
         }
+        
+//        // 使用SwiftyJSON
+//        Alamofire.request(.GET, url).validate().responseJSON { response in
+//            switch response.result {
+//            case .Success:
+//                if let value = response.result.value {
+//                    let json = JSON(value)
+//                    print("JSON: \(json)")
+//                    
+//                    
+//                }
+//            case .Failure(let error):
+//                print(error)
+//            }
+//        }
     }
     
     override func didReceiveMemoryWarning() {
