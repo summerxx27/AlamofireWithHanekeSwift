@@ -101,8 +101,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func XSummerybcNetworkReq()
     {
         let url = "http://api.app.happyjuzi.com/v2.4/article/list/home?&page=1"
-        
-        
+        let str: String = "test"
+        // 拼接网址 \
+        var url1 = "http://api.app.happyjuzi.com/v2.4/article/list/home?&page=\(str)"
         Alamofire.request(.GET, url).responseJSON() {
             (data) in
 
