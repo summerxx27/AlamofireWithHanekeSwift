@@ -26,10 +26,10 @@ class TableViewCell: UITableViewCell {
     // createCell
     func createCell()
     {
-        imagePic = UIImageView.init(frame: CGRectMake(0, 0, 325, 180))
+        imagePic = UIImageView.init(frame: CGRectMake(0, 0, 350, 180))
         self.contentView.addSubview(imagePic)
         // 二次计算高度
-        titleLabel = UILabel.init(frame: CGRectMake(0, 185, 325, 30))
+        titleLabel = UILabel.init(frame: CGRectMake(0, 185, 350, 30))
         self.contentView.addSubview(titleLabel)
     }
     override func awakeFromNib() {

@@ -9,7 +9,6 @@
 import UIKit
 import Alamofire
 import Haneke
-import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var arrayData = NSMutableArray()
@@ -20,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         // 创建tableview
         createTableview()
         // 网络请求
@@ -56,11 +56,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     func createHeaderView()
     {
-        viewHeader = UIView.init(frame: CGRectMake(20, 20, 325, 100))
-        viewHeader.backgroundColor = UIColor.yellowColor()
-        let label = UILabel.init(frame: CGRectMake(0, 0, 325, 40))
-        viewHeader.addSubview(label)
-        label.text = "I am HeaderView"
+        viewHeader = UIView.init(frame: CGRectMake(20, 20, self.view.frame.size.width, 180))
+        // 轮播图
+        let cycle = XSCycleScrollView.init(frame: CGRectMake(0, 0, viewHeader.frame.size.width, 175))
+        viewHeader.addSubview(cycle)
+        let images: NSMutableArray = ["http://images11.app.happyjuzi.com/news/201604/12/570c656b35ae9.jpg", "http://images11.app.happyjuzi.com/news/201604/12/570c8bc8e0b33.jpg", "http://images11.app.happyjuzi.com/news/201604/12/570c656b35ae9.jpg", "http://images11.app.happyjuzi.com/news/201604/12/570c8bc8e0b33.jpg"]
+        cycle.images = images
+
         tableViewself.tableHeaderView = viewHeader
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -100,10 +102,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // 网络请求
     func XSummerybcNetworkReq()
     {
-        let url = "http://api.app.happyjuzi.com/v2.4/article/list/home?&page=1"
-        let str: String = "test"
+//        let url = "http://api.app.happyjuzi.com/v2.4/article/list/home?&page=1"
+//        let str: String = "test"
+        
+//        let 我是一个网址: String = "test"
         // 拼接网址 \
-        var url1 = "http://api.app.happyjuzi.com/v2.4/article/list/home?&page=\(str)"
+        let url = "http://api.app.happyjuzi.com/v2.4/article/list/home?&page=1"
+//        print(url1)
         Alamofire.request(.GET, url).responseJSON() {
             (data) in
 

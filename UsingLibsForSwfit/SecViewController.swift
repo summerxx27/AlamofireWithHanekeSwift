@@ -32,7 +32,7 @@ class SecViewController: UIViewController, UIWebViewDelegate {
     }
     func createWebview()
     {
-        self.webView = UIWebView.init(frame: CGRectMake(0, 0, 325, self.view.frame.size.height - 49))
+        self.webView = UIWebView.init(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 49))
         self.webView.scalesPageToFit = true
         let url  = "http://www.baidu.com"
         // 创 建
