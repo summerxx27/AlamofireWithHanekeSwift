@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< Updated upstream
-		BC1DE8141CA387900030276E /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1DE8131CA387900030276E /* Info.swift */; };
-=======
-		04F785911CAED51B00B95E32 /* AutoCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F785901CAED51B00B95E32 /* AutoCycleView.swift */; };
->>>>>>> Stashed changes
 		BC5FDCB61CA2740300FD9449 /* Surge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5FDCB31CA273FB00FD9449 /* Surge.framework */; };
 		BC5FDCB71CA2740300FD9449 /* Surge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC5FDCB31CA273FB00FD9449 /* Surge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC6266831CBD015100ED934E /* XSCustomCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6266811CBD015100ED934E /* XSCustomCycleCell.swift */; };
@@ -180,11 +175,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-<<<<<<< Updated upstream
-		BC1DE8131CA387900030276E /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
-=======
-		04F785901CAED51B00B95E32 /* AutoCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCycleView.swift; sourceTree = "<group>"; };
->>>>>>> Stashed changes
 		BC5FDCA41CA273FA00FD9449 /* Surge.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Surge.xcodeproj; path = "Surge-master/Surge.xcodeproj"; sourceTree = "<group>"; };
 		BC6266811CBD015100ED934E /* XSCustomCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XSCustomCycleCell.swift; sourceTree = "<group>"; };
 		BC6266821CBD015100ED934E /* XSCycleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XSCycleScrollView.swift; sourceTree = "<group>"; };

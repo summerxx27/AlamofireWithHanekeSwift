@@ -130,8 +130,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         }
         
-<<<<<<< Updated upstream
-=======
+
         Alamofire.request(.GET, url).responseJSON() {
             (data) in
 
@@ -153,7 +152,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         }
         
->>>>>>> Stashed changes
 //        // 使用SwiftyJSON
 //        Alamofire.request(.GET, url).validate().responseJSON { response in
 //            switch response.result {
@@ -161,12 +159,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //                if let value = response.result.value {
 //                    let json = JSON(value)
 //                    print("JSON: \(json)")
-<<<<<<< Updated upstream
 //                    
-=======
+
 //                    let dataDic = json["data"]
 //                    let array = dataDic["list"]
->>>>>>> Stashed changes
 //                    
 //                }
 //            case .Failure(let error):
